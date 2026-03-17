@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+streamlit
+langchain
+langchain-community
+langchain-chroma
+langchain-ollama
+langchain-text-splitters
+pypdf
+python-multipart
+requests
+
