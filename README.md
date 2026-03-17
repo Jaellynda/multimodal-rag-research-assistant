@@ -24,6 +24,26 @@ Ask complex queries about research papers and receive grounded, deterministic ex
 Large Language Models (LLMs) are fluent but prone to hallucination. **New Covenant** explores RAG as a solution to ground AI responses in verified academic data, providing a tool that mimics human cognitive consolidation.
 
 ---
+## Technical Deep Dive: How the RAG Engine Works
+
+This project implements a sophisticated **Retrieval-Augmented Generation (RAG)** pipeline designed to minimize LLM hallucinations by grounding responses in a local vector database.
+
+### 1. Semantic Chunking & Embedding
+Standard text splitting often breaks sentences in half, losing context. This system uses `RecursiveCharacterTextSplitter` to maintain semantic integrity. Each chunk is then transformed into a **384-dimensional vector** using neural embeddings.
+
+
+
+### 2. Vector Storage & Retrieval
+The high-dimensional vectors are stored in **ChromaDB**. When a query is made:
+- The query itself is embedded into a vector.
+- We perform a **Cosine Similarity Search** to find the "Nearest Neighbors" in the vector space.
+- This allows the system to find relevant information even if the exact keywords don't match.
+
+### 3. The LCEL Synthesis Chain
+Using **LangChain Expression Language (LCEL)**, the system follows a strict execution logic:
+`Context + Question -> Prompt Template -> Llama 3 -> Parsed Answer`
+
+By enforcing this "Context-Only" rule in the system prompt, we ensure the AI acts as a reliable research assistant rather than a creative writer.
 
 ## System Architecture
 The system utilizes a decoupled microservices architecture to ensure scalability and local performance.
