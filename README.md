@@ -7,8 +7,6 @@ No API billing. 100% Private. Research-ready.
 
 ## Quick Demo
 ![Demo](demo.gif) 
-<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/43d6c699-7809-4201-a3b2-5d053dac51a2" />
-
 
 
 
@@ -97,9 +95,8 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 
 ---
 #Screenshots
-<img width="3022" height="1546" alt="image" src="https://github.com/user-attachments/assets/0a4e866d-821d-4af9-afb5-8a28286eab88" />
 
-
+<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/f607f3ab-2cdf-4212-b842-5ee85a4f165f" />
 
 ## License
 MIT License  
