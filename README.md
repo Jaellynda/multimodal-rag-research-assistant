@@ -1,4 +1,4 @@
-<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/4729cdec-27f2-4e08-80ef-a491487a6480" /># New Covenant: Multimodal Research Intelligence
+Multimodal Research Intelligence
 A **Local AI Research Assistant** that performs high-fidelity document analysis and cross-paper synthesis using **Retrieval-Augmented Generation (RAG)** and **Llama 3**.
 
 No API billing. 100% Private. Research-ready.
