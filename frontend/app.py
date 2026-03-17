@@ -1,70 +1,43 @@
 import streamlit as st
 import requests
 
-# FAANG Style: Clean, minimalist layout
-st.set_page_config(
-    page_title="New Covenant | Research Intelligence", 
-    page_icon="🔬", 
-    layout="wide"
-)
+st.set_page_config(page_title="New Covenant | Research Intelligence", layout="wide")
 
-# Professional Header
-st.markdown("""
-    <style>
-    .main-title {
-        font-size: 42px;
-        font-weight: 700;
-        color: #1E1E1E;
-        margin-bottom: 0px;
-    }
-    .sub-title {
-        font-size: 18px;
-        color: #666;
-        margin-bottom: 30px;
-    }
-    </style>
-    <div class="main-title">New Covenant Research Intelligence</div>
-    <div class="sub-title">Multimodal Retrieval-Augmented Generation (RAG) System</div>
-    """, unsafe_allow_html=True)
-
-# Sidebar Design
+# Sidebar for Multi-Document Management
 with st.sidebar:
-    st.header("Document Management")
-    st.info("Upload technical PDFs for cross-referential analysis.")
-    uploaded_file = st.file_uploader("Select PDF", type="pdf", help="Max size: 50MB")
+    st.header("Research Workspace")
+    st.info("Upload multiple papers to enable cross-referential analysis.")
+    uploaded_files = st.file_uploader("Upload PDFs", type="pdf", accept_multiple_files=True)
     
-    if uploaded_file:
-        if st.button("Initialize Indexing"):
-            with st.spinner("Analyzing document structure..."):
-                files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
-                try:
-                    response = requests.post("http://127.0.0.1:8000/upload", files=files)
-                    st.success("Document successfully vectorized.")
-                except:
-                    st.error("Connection to backend failed.")
+    if st.button("Index Documents"):
+        if uploaded_files:
+            for file in uploaded_files:
+                with st.spinner(f"Indexing {file.name}..."):
+                    files = {"file": (file.name, file.getvalue())}
+                    requests.post("http://127.0.0.1:8000/upload", files=files)
+            st.success("All documents indexed.")
+        else:
+            st.warning("Please upload files first.")
 
-# Chat System with Streaming-style Logic
+# Main Interface
+st.title("New Covenant Research Assistant")
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# Display chat history
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
 
-# User Query Input
-if prompt := st.chat_input("Enter research query..."):
+if prompt := st.chat_input("Ask a cross-document research question..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner("Synthesizing answer..."):
-            try:
-                res = requests.get(f"http://127.0.0.1:8000/query?question={prompt}")
-                answer = res.json()["answer"]
-                st.markdown(answer)
-                st.session_state.messages.append({"role": "assistant", "content": answer})
-            except Exception as e:
-                st.error("Synthesis error. Ensure the backend is running.")
-
+        with st.spinner("Synthesizing multi-document analysis..."):
+            # The logic stays clean: the backend handles the retrieval from all indexed docs
+            res = requests.get(f"http://127.0.0.1:8000/query?question={prompt}")
+            answer = res.json()["answer"]
+            st.markdown(answer)
+            st.session_state.messages.append({"role": "assistant", "content": answer})
