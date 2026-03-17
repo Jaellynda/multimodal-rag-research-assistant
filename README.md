@@ -92,6 +92,9 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 - Citation Mapping: Highlighting exactly which page the AI is quoting.  
 
 ---
+#Screenshots
+<img width="1510" height="765" alt="Screenshot 2026-03-17 at 5 08 49 PM" src="https://github.com/user-attachments/assets/5a3a85e2-e24b-4dc4-b494-8e84da5af39e" />
+
 
 ## License
 MIT License  
