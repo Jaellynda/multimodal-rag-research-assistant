@@ -1,4 +1,4 @@
-# New Covenant: Multimodal Research Intelligence
+<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/4729cdec-27f2-4e08-80ef-a491487a6480" /># New Covenant: Multimodal Research Intelligence
 A **Local AI Research Assistant** that performs high-fidelity document analysis and cross-paper synthesis using **Retrieval-Augmented Generation (RAG)** and **Llama 3**.
 
 No API billing. 100% Private. Research-ready.
@@ -6,7 +6,11 @@ No API billing. 100% Private. Research-ready.
 ---
 
 ## Quick Demo
-![Demo](demo.gif)
+![Demo](demo.gif) 
+<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/43d6c699-7809-4201-a3b2-5d053dac51a2" />
+
+
+
 
 Ask complex queries about research papers and receive grounded, deterministic explanations.
 
@@ -93,7 +97,8 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 
 ---
 #Screenshots
-<img width="1510" height="765" alt="Screenshot 2026-03-17 at 5 08 49 PM" src="https://github.com/user-attachments/assets/5a3a85e2-e24b-4dc4-b494-8e84da5af39e" />
+<img width="3022" height="1546" alt="image" src="https://github.com/user-attachments/assets/0a4e866d-821d-4af9-afb5-8a28286eab88" />
+
 
 
 ## License
