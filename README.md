@@ -70,7 +70,9 @@ The system utilizes a decoupled microservices architecture to ensure scalability
 - **Streamlit:** Minimalist, high-end research interface.  
 
 ---
-<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/e7209c05-014c-4fc0-a44e-16a28159db62" />
+
+<img width="3024" height="1624" alt="image" src="https://github.com/user-attachments/assets/c5e04145-5899-49b3-9d41-9269b7f30039" />
+
 
 
 ## Project Structure
