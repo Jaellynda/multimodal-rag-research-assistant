@@ -1,12 +1,11 @@
-fastapi
-uvicorn
+pysqlite3-binary
 streamlit
 langchain
 langchain-community
 langchain-chroma
-langchain-ollama
+langchain-groq
+langchain-huggingface
 langchain-text-splitters
 pypdf
-python-multipart
-requests
+sentence-transformers
 
