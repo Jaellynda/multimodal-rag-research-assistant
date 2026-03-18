@@ -116,7 +116,30 @@ multimodal-rag-research-assistant/
 ├── .gitattributes           # Hugging Face config (leftover from migration)
 ├── Dockerfile               # Hugging Face/Container config
 └── README.md                # System Documentation & Portfolio Bio
-
+--
+multimodal-rag-research-assistant/
+│
+├── app/
+│   └── new_covenant.py          # Main Streamlit application (UI + RAG pipeline)
+│
+├── core/
+│   ├── rag_pipeline.py          # RAG logic (retrieval + generation)
+│   └── embeddings.py            # Embedding + vector store setup
+│
+├── data/
+│   ├── temp/                    # Runtime PDF storage (auto-generated)
+│   └── chroma_db/               # Persistent vector database
+│
+├── legacy/
+│   ├── app.py                   # Original UI (deprecated)
+│   ├── main.py                  # FastAPI backend (deprecated)
+│   └── rag_logic.py             # Initial modular logic
+│
+├── requirements.txt             # Dependencies (Streamlit Cloud ready)
+├── README.md                    # Documentation & portfolio overview
+├── Dockerfile                   # Container config (legacy / optional)
+└── .gitattributes               # Repository config
+--
 ## License
 MIT License  
 
