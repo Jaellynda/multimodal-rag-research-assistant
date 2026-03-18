@@ -54,7 +54,22 @@ The system utilizes a decoupled microservices architecture to ensure scalability
 4. **Synthesis:** Meta Llama 3 synthesizes a grounded response via LCEL.  
 
 ---
+## Project Structure
+multimodal-rag-research-assistant/
+├── frontend/
+│   ├── new_covenant_v1.py   # NEW: The "Live" App (All-in-one Logic + UI)
+│   └── app.py               # Legacy/Original Local UI
+├── backend/
+│   ├── main.py              # Original FastAPI/Local logic
+│   └── rag_logic.py         # Original Modular Logic
+├── temp/                    # AUTO-GENERATED: Created by app for PDF processing
+├── chroma_db/               # Persistent Vector Database (Binary)
+├── requirements.txt         # ROOT: Critical for Streamlit Cloud Deployment
+├── .gitattributes           # Hugging Face config (leftover from migration)
+├── Dockerfile               # Hugging Face/Container config
+└── README.md                # System Documentation & Portfolio Bio
 
+---
 ## Tech Stack
 
 ### Backend & Logic
@@ -101,9 +116,6 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 - Citation Mapping: Highlighting exactly which page the AI is quoting.  
 
 ---
-#Screenshots
-
-<img width="3024" height="1626" alt="image" src="https://github.com/user-attachments/assets/f607f3ab-2cdf-4212-b842-5ee85a4f165f" />
 
 ## License
 MIT License  
@@ -116,21 +128,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
-
-## Project Structure
-```text
-multimodal-rag/
-├── backend/
-│   ├── main.py          # FastAPI server & LCEL Pipeline logic
-│   └── data/            # Local PDF document repository
-├── frontend/
-│   └── app.py           # Streamlit Research Interface
-├── chroma_db/           # Persistent Vector Database (Binary)
-├── venv/                # Isolated Virtual Environment
-├── .gitignore           # Git exclusion rules
-├── requirements.txt     # Dependency manifest
-└── README.md            # System Documentation
----
-
 
 
