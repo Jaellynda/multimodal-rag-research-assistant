@@ -103,21 +103,8 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 
 ---
 ## Project Structure
-multimodal-rag-research-assistant/
-├── frontend/
-│   ├── new_covenant_v1.py   # NEW: The "Live" App (All-in-one Logic + UI)
-│   └── app.py               # Legacy/Original Local UI
-├── backend/
-│   ├── main.py              # Original FastAPI/Local logic
-│   └── rag_logic.py         # Original Modular Logic
-├── temp/                    # AUTO-GENERATED: Created by app for PDF processing
-├── chroma_db/               # Persistent Vector Database (Binary)
-├── requirements.txt         # ROOT: Critical for Streamlit Cloud Deployment
-├── .gitattributes           # Hugging Face config (leftover from migration)
-├── Dockerfile               # Hugging Face/Container config
-└── README.md                # System Documentation & Portfolio Bio
 --
-multimodal-rag-research-assistant/
+
 │
 ├── app/
 │   └── new_covenant.py          # Main Streamlit application (UI + RAG pipeline)
@@ -140,6 +127,7 @@ multimodal-rag-research-assistant/
 ├── Dockerfile                   # Container config (legacy / optional)
 └── .gitattributes               # Repository config
 --
+
 ## License
 MIT License  
 
