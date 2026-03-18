@@ -74,23 +74,6 @@ The system utilizes a decoupled microservices architecture to ensure scalability
 <img width="3024" height="1624" alt="image" src="https://github.com/user-attachments/assets/c5e04145-5899-49b3-9d41-9269b7f30039" />
 
 
-
-## Project Structure
-```text
-multimodal-rag/
-├── backend/
-│   ├── main.py          # FastAPI server & LCEL Pipeline logic
-│   └── data/            # Local PDF document repository
-├── frontend/
-│   └── app.py           # Streamlit Research Interface
-├── chroma_db/           # Persistent Vector Database (Binary)
-├── venv/                # Isolated Virtual Environment
-├── .gitignore           # Git exclusion rules
-├── requirements.txt     # Dependency manifest
-└── README.md            # System Documentation
----
-
-
 ## How it Works: The RAG Pipeline
 
 ### 1. Document Processing
@@ -133,4 +116,21 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
+
+## Project Structure
+```text
+multimodal-rag/
+├── backend/
+│   ├── main.py          # FastAPI server & LCEL Pipeline logic
+│   └── data/            # Local PDF document repository
+├── frontend/
+│   └── app.py           # Streamlit Research Interface
+├── chroma_db/           # Persistent Vector Database (Binary)
+├── venv/                # Isolated Virtual Environment
+├── .gitignore           # Git exclusion rules
+├── requirements.txt     # Dependency manifest
+└── README.md            # System Documentation
+---
+
+
 
