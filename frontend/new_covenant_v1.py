@@ -24,7 +24,7 @@ else:
 
 # 2. Initialize Models
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-llm = ChatGroq(temperature=0, groq_api_key=GROQ_API_KEY, model_name="llama3-8b-8192")
+llm = ChatGroq(temperature=0, groq_api_key=GROQ_API_KEY, model_name="llama-3.1-8b-instant")
 
 # 3. Sidebar for Uploads
 with st.sidebar:
