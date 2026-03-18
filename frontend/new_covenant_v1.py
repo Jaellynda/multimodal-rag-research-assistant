@@ -13,7 +13,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
 st.set_page_config(page_title="New Covenant | Research Intelligence", layout="wide")
-st.title("🔬 New Covenant Research Intelligence")
+st.title("New Covenant Research Intelligence")
 
 # 1. Access the Secret Key from Hugging Face Settings
 if "GROQ_API_KEY" in st.secrets:
