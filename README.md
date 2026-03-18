@@ -54,20 +54,6 @@ The system utilizes a decoupled microservices architecture to ensure scalability
 4. **Synthesis:** Meta Llama 3 synthesizes a grounded response via LCEL.  
 
 ---
-## Project Structure
-multimodal-rag-research-assistant/
-├── frontend/
-│   ├── new_covenant_v1.py   # NEW: The "Live" App (All-in-one Logic + UI)
-│   └── app.py               # Legacy/Original Local UI
-├── backend/
-│   ├── main.py              # Original FastAPI/Local logic
-│   └── rag_logic.py         # Original Modular Logic
-├── temp/                    # AUTO-GENERATED: Created by app for PDF processing
-├── chroma_db/               # Persistent Vector Database (Binary)
-├── requirements.txt         # ROOT: Critical for Streamlit Cloud Deployment
-├── .gitattributes           # Hugging Face config (leftover from migration)
-├── Dockerfile               # Hugging Face/Container config
-└── README.md                # System Documentation & Portfolio Bio
 
 ---
 ## Tech Stack
@@ -116,6 +102,20 @@ Using the modern Pipe Operator (`|`), the system pipes the retrieved context dir
 - Citation Mapping: Highlighting exactly which page the AI is quoting.  
 
 ---
+## Project Structure
+multimodal-rag-research-assistant/
+├── frontend/
+│   ├── new_covenant_v1.py   # NEW: The "Live" App (All-in-one Logic + UI)
+│   └── app.py               # Legacy/Original Local UI
+├── backend/
+│   ├── main.py              # Original FastAPI/Local logic
+│   └── rag_logic.py         # Original Modular Logic
+├── temp/                    # AUTO-GENERATED: Created by app for PDF processing
+├── chroma_db/               # Persistent Vector Database (Binary)
+├── requirements.txt         # ROOT: Critical for Streamlit Cloud Deployment
+├── .gitattributes           # Hugging Face config (leftover from migration)
+├── Dockerfile               # Hugging Face/Container config
+└── README.md                # System Documentation & Portfolio Bio
 
 ## License
 MIT License  
